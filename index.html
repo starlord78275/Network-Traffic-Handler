@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Handler Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><span class="icon">🌐</span> Traffic Handler Dashboard</h1>
+                <div class="status-badge" id="statusBadge">
+                    <span class="pulse"></span>
+                    <span>Live</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-container">
+            <div class="stat-card card-purple">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <div class="stat-label">Active Connections</div>
+                    <div class="stat-value" id="activeConnections">0</div>
+                </div>
+            </div>
+
+            <div class="stat-card card-blue">
+                <div class="stat-icon">🔗</div>
+                <div class="stat-content">
+                    <div class="stat-label">Total Connections</div>
+                    <div class="stat-value" id="totalConnections">0</div>
+                </div>
+            </div>
+
+            <div class="stat-card card-green">
+                <div class="stat-icon">⬇️</div>
+                <div class="stat-content">
+                    <div class="stat-label">Bytes Received</div>
+                    <div class="stat-value" id="bytesReceived">0</div>
+                </div>
+            </div>
+
+            <div class="stat-card card-orange">
+                <div class="stat-icon">⬆️</div>
+                <div class="stat-content">
+                    <div class="stat-label">Bytes Sent</div>
+                    <div class="stat-value" id="bytesSent">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connected Clients -->
+        <div class="section-card">
+            <h2><span class="icon">👥</span> Connected Clients</h2>
+            <div class="clients-container" id="clientsList">
+                <p class="empty-state">No clients connected</p>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="section-card">
+            <h2><span class="icon">💬</span> Recent Messages</h2>
+            <div class="messages-container" id="messages">
+                <p class="empty-state">Waiting for messages...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Traffic Handler v2.0 | Real-time Network Monitor</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
